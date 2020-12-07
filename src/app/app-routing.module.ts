@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'iniciosesion',
     pathMatch: 'full'
+  },
+  {
+    path: 'iniciosesion',
+    loadChildren: () => import('./iniciosesion/iniciosesion.module').then( m => m.IniciosesionPageModule)
   },
 ];
 

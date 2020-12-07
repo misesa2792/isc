@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="border-red">
+    <img src="assets/ionic.png" class="border-img">
+  </div>
+
+  {{ error }}
+
+  <div class="cont-login">
+    <ion-item>
+      <ion-label color="primary" position="floating">Usuario</ion-label>
+      <ion-input type="text" #txtuser></ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-item>
+      <ion-label color="primary" position="floating">Contraseña</ion-label>
+      <ion-input type="{{ tipo }}" #txtpassword></ion-input>
+      <!--
+        Botón
+        <ion-button class="btn-icono" (click)="mostrarPassword()">
+         <ion-icon name="{{ icono }}"></ion-icon>
+        </ion-button>
+      -->   
+      <span class="btn-icono" (click)="mostrarPassword()">
+        <ion-icon name="{{ icono }}"></ion-icon>
+      </span>
+    </ion-item>
+
+    <br>
+    <br>
+
+    <ion-button color="primary" 
+                expand="block" 
+                shape="round"
+                class="btn-iniciar"
+                (click)="iniciarSesion(txtuser.value, txtpassword.value)"
+                >Iniciar Sesión</ion-button>
+
+  </div>
+
+</ion-content>

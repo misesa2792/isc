@@ -1,5 +1,7 @@
 {
   "name": "isc",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
